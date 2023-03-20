@@ -26,7 +26,7 @@ namespace SimpleDnsCrypt.ViewModels
 		{
 			_windowManager = windowManager;
 			_events = events;
-			_events.Subscribe(this);
+			_events.SubscribeOnPublishedThread(this);
 			_addressBlacklist = new BindableCollection<string>();
 			LoadAddressBlacklist();
 		}

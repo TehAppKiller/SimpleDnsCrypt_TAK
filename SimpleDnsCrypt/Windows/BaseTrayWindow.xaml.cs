@@ -1,4 +1,6 @@
-﻿namespace SimpleDnsCrypt.Windows
+﻿using MahApps.Metro.Controls;
+
+namespace SimpleDnsCrypt.Windows
 {
 	public partial class BaseTrayWindow
 	{

@@ -49,7 +49,7 @@ namespace SimpleDnsCrypt.ViewModels
 	    {
 		    _windowManager = windowManager;
 		    _events = events;
-		    _events.Subscribe(this);
+		    _events.SubscribeOnPublishedThread(this);
 		    _domainBlacklistRules = new BindableCollection<string>();
 		    _domainWhitelistRules = new BindableCollection<string>();
 
@@ -119,6 +119,8 @@ namespace SimpleDnsCrypt.ViewModels
 				_isBlacklistEnabled = value;
 				ManageDnsCryptBlacklist(DnscryptProxyConfigurationManager.DnscryptProxyConfiguration);
 				NotifyOfPropertyChange(() => IsBlacklistEnabled);
+
+				NotifyOfPropertyChange(() => IsDomainlistWorking);
 			}
 		}
 
@@ -481,11 +483,13 @@ namespace SimpleDnsCrypt.ViewModels
 			}
 		}
 
-		public void ClearDomainBlackList()
+		public async void ClearDomainBlackList()
 		{
 			Execute.OnUIThread(() => { DomainBlacklistRules.Clear(); });
 			SaveBlacklistRulesToFile();
-			BuildBlacklist();
+
+			Task task = BuildBlacklist();
+			await task;
 		}
 
 		public async void AddBlacklistRule()
@@ -684,6 +688,12 @@ namespace SimpleDnsCrypt.ViewModels
 				Log.Error(exception);
 			}
 		}
+
+		public bool IsDomainlistWorking
+		{
+			get => IsBlacklistEnabled;
+		}
+
 		#endregion
 	}
 }

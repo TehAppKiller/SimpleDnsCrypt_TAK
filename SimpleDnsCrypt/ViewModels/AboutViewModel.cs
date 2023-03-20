@@ -243,16 +243,6 @@ namespace SimpleDnsCrypt.ViewModels
 					},
 					new License
 					{
-						LicenseHeaderText = "ControlzEx",
-						LicenseText = await LoadLicense("ControlzEx.txt").ConfigureAwait(false),
-						LicenseCodeLink = new LicenseLink
-						{
-							LinkText = LocalizationEx.GetUiString("about_view_on_github", Thread.CurrentThread.CurrentCulture),
-							LinkUri = new Uri("https://github.com/ControlzEx/ControlzEx")
-						}
-					},
-					new License
-					{
 						LicenseHeaderText = "Baseclass.Contrib.Nuget.Output",
 						LicenseText = await LoadLicense("Baseclass.Contrib.Nuget.Output.txt").ConfigureAwait(false),
 						LicenseCodeLink = new LicenseLink

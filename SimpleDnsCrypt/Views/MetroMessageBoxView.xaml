@@ -6,7 +6,7 @@
              xmlns:cal="http://www.caliburnproject.org"
              xmlns:lex="http://wpflocalizeextension.codeplex.com"
              xmlns:converters="clr-namespace:SimpleDnsCrypt.Converters"
-             xmlns:helper="clr-namespace:SimpleDnsCrypt.Helper"
+             xmlns:helper="clr-namespace:SimpleDnsCrypt.Helper" xmlns:viewmodels="clr-namespace:SimpleDnsCrypt.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:MetroMessageBoxViewModel}"
              lex:LocalizeDictionary.DesignCulture="en"
              lex:ResxLocalizationProvider.DefaultAssembly="SimpleDnsCrypt"
              lex:ResxLocalizationProvider.DefaultDictionary="Translation"

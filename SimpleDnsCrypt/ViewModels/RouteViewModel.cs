@@ -65,5 +65,15 @@ namespace SimpleDnsCrypt.ViewModels
 			if (Route.Where(s => s.Name.Equals(stampFileEntry.Name)).FirstOrDefault() != null) return;
 			Route.Add(stampFileEntry);
 		}
+
+		void IDropTarget.DragEnter(IDropInfo dropInfo)
+		{
+			// Not used
+		}
+
+		void IDropTarget.DragLeave(IDropInfo dropInfo)
+		{
+			// Not used
+		}
 	}
 }

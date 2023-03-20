@@ -1,7 +1,7 @@
-﻿<controls:MetroWindow x:Class="SimpleDnsCrypt.Windows.BaseWindow"
+﻿<mah:MetroWindow x:Class="SimpleDnsCrypt.Windows.BaseWindow"
                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                      xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                       xmlns:lex="http://wpflocalizeextension.codeplex.com"
                       xmlns:cal="http://www.caliburnproject.org"
                       xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
@@ -11,19 +11,19 @@
                       Width="{Binding WindowWidth, Mode=TwoWay}" 
                       Height="{Binding WindowHeight, Mode=TwoWay}" 
                       SizeToContent="WidthAndHeight"
-                      GlowBrush="{DynamicResource AccentColorBrush}"
+                      GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
                       Icon="../Images/simplednscrypt.ico" ShowIconOnTitleBar="False"
                       WindowStartupLocation="CenterScreen" TitleCharacterCasing="Normal" Topmost="False"
                       ShowMaxRestoreButton="False" ResizeMode="CanResizeWithGrip" ShowInTaskbar="True"
                       ShowMinButton="True" TitleForeground="White">
-    <controls:MetroWindow.Resources>
+    <mah:MetroWindow.Resources>
         <ResourceDictionary>
             <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
         </ResourceDictionary>
-    </controls:MetroWindow.Resources>
-    <controls:MetroWindow.RightWindowCommands>
-        <controls:WindowCommands>
-            <controls:MetroProgressBar Width="100" Height="20" IsIndeterminate="True" Orientation="Horizontal" 
+    </mah:MetroWindow.Resources>
+    <mah:MetroWindow.RightWindowCommands>
+        <mah:WindowCommands>
+            <mah:MetroProgressBar Width="100" Height="20" IsIndeterminate="True" Orientation="Horizontal" 
                                        VerticalAlignment="Center" Margin="0,0,20,0" Foreground="White"
                                        Visibility="{Binding IsWorkingOnService, Converter={StaticResource BoolToVisibilityConverter}}"/>
             <Button Cursor="Hand" x:Name="OpenLogDirectory" cal:Message.Attach="OpenLogDirectory" ToolTip="{lex:Loc Key=open_log_directory}">
@@ -33,12 +33,12 @@
                 <iconPacks:PackIconMaterial Kind="Emoticon"/>
             </Button>
             <Button Cursor="Hand" x:Name="Settings" cal:Message.Attach="Settings" ToolTip="{lex:Loc Key=settings}">
-                <iconPacks:PackIconMaterial Kind="Settings"/>
+                <iconPacks:PackIconMaterial Kind="Cog"/>
             </Button>
             <Button Cursor="Hand" x:Name="Proxies" cal:Message.Attach="Proxies" ToolTip="{lex:Loc Key=proxy_manage_proxies}">
                 <iconPacks:PackIconMaterial Kind="AccountNetwork"/>
             </Button>
-            <ComboBox Style="{StaticResource MetroComboBox}"
+            <ComboBox Style="{StaticResource MahApps.Styles.ComboBox}"
                       ItemsSource="{Binding Languages}"
                       SelectedItem="{Binding SelectedLanguage}"
                       IsEnabled="True"
@@ -49,6 +49,6 @@
                       VerticalAlignment="Center"
                       Background="#198AB328" Opacity="0.4">
             </ComboBox>
-        </controls:WindowCommands>
-    </controls:MetroWindow.RightWindowCommands>
-</controls:MetroWindow>
+        </mah:WindowCommands>
+    </mah:MetroWindow.RightWindowCommands>
+</mah:MetroWindow>

@@ -6,8 +6,8 @@
              xmlns:lex="http://wpflocalizeextension.codeplex.com"
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              xmlns:dd="urn:gong-wpf-dragdrop"
-             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-             xmlns:cal="http://www.caliburnproject.org"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:cal="http://www.caliburnproject.org" xmlns:viewmodels="clr-namespace:SimpleDnsCrypt.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:RouteViewModel}"
              mc:Ignorable="d"
              Height="Auto" Width="650"
              lex:LocalizeDictionary.DesignCulture="en"
@@ -107,8 +107,8 @@
                                                 HorizontalContentAlignment="Center"
                                                 VerticalContentAlignment="Center"
                                                 BorderBrush="#CCC1170F"
-                                                FocusVisualStyle="{DynamicResource MahApps.Metro.Styles.MetroCircleFocusVisual}"
-                                                Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}"
+                                                FocusVisualStyle="{DynamicResource MahApps.Styles.Button.FocusVisualStyle.Circle}"
+                                                Style="{DynamicResource MahApps.Styles.Button.Circle}"
                                                 Margin="0,2,5,2" HorizontalAlignment="Right" VerticalAlignment="Center">
                                             <iconPacks:PackIconMaterial
                                                 Kind="Delete"

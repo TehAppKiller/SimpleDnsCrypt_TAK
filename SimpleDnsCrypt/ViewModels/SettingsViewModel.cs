@@ -34,7 +34,7 @@ namespace SimpleDnsCrypt.ViewModels
 		{
 			_windowManager = windowManager;
 			_events = events;
-			_events.Subscribe(this);
+			_events.SubscribeOnPublishedThread(this);
 			_isAdvancedSettingsTabVisible = Properties.Settings.Default.IsAdvancedSettingsTabVisible;
 			_isStartInTrayEnabled = Properties.Settings.Default.StartInTray;
 			_isTrayModeEnabled = Properties.Settings.Default.TrayMode;

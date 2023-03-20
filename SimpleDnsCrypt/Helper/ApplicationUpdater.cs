@@ -30,7 +30,7 @@ namespace SimpleDnsCrypt.Helper
 				var currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
 
 				remoteUpdate.CanUpdate = false;
-				var remoteUpdateFile = Environment.Is64BitProcess ? Global.ApplicationUpdateUri64 : Global.ApplicationUpdateUri;
+				var remoteUpdateFile = Global.ApplicationUpdateUri64;
 				var remoteUpdateData = await DownloadRemoteUpdateFileAsync(remoteUpdateFile).ConfigureAwait(false);
 
 				if (remoteUpdateData != null)

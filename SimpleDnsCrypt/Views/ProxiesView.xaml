@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:lex="http://wpflocalizeextension.codeplex.com"
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" xmlns:viewmodels="clr-namespace:SimpleDnsCrypt.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:ProxiesViewModel}"
              mc:Ignorable="d"
              Height="Auto" Width="400"
              lex:LocalizeDictionary.DesignCulture="en"

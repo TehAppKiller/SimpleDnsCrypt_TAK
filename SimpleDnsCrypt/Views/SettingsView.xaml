@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:lex="http://wpflocalizeextension.codeplex.com"
              xmlns:converters="clr-namespace:SimpleDnsCrypt.Converters"
-             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:viewmodels="clr-namespace:SimpleDnsCrypt.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:SettingsViewModel}"
              mc:Ignorable="d"
              Height="Auto" MinWidth="340"
              lex:LocalizeDictionary.DesignCulture="en"
@@ -38,7 +38,7 @@
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal">
                     <iconPacks:PackIconMaterial Height="20"
-                                                Width="20" Kind="Settings" Opacity="0.7"
+                                                Width="20" Kind="Cog" Opacity="0.7"
                                                 Foreground="#FF8ab329"
                                                 HorizontalAlignment="Left"
                                                 VerticalAlignment="Center" />

@@ -1,7 +1,7 @@
-﻿<controls:MetroWindow x:Class="SimpleDnsCrypt.Windows.BaseDialogWindow"
+﻿<mah:MetroWindow x:Class="SimpleDnsCrypt.Windows.BaseDialogWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         Title="{Binding WindowTitle}"
         Height="300"
         Width="800"
@@ -15,6 +15,6 @@
         TitleForeground="White"
         Topmost="True"
         TitleCharacterCasing="Normal"
-        GlowBrush="{DynamicResource AccentColorBrush}"
+        GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
         WindowStartupLocation="CenterScreen">
-</controls:MetroWindow>
+</mah:MetroWindow>

@@ -1,7 +1,9 @@
-﻿namespace SimpleDnsCrypt.Windows
+﻿using MahApps.Metro.Controls;
+
+namespace SimpleDnsCrypt.Windows
 {
-	public partial class BaseDialogWindow
-	{
+	public partial class BaseDialogWindow : MetroWindow
+    {
 		public BaseDialogWindow()
 		{
 			InitializeComponent();

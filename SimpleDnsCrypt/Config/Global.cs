@@ -10,14 +10,8 @@
 		/// <summary>
 		///     Remote URI where the application will find the update informations.
 		/// </summary>
-		public const string ApplicationUpdateUri =
-			"https://raw.githubusercontent.com/bitbeans/SimpleDnsCrypt/master/update.yml";
-
-		/// <summary>
-		///     Remote URI where the application will find the update informations.
-		/// </summary>
 		public const string ApplicationUpdateUri64 =
-			"https://raw.githubusercontent.com/bitbeans/SimpleDnsCrypt/master/update64.yml";
+			"https://raw.githubusercontent.com/TehAppKiller/SimpleDnsCrypt/master/update64.yml";
 
 		/// <summary>
 		///     The public key to validate the installer.
@@ -27,12 +21,12 @@
 		/// <summary>
 		/// Microsoft Visual C++ Redistributable for Visual Studio 2015 - 2019 (x86)
 		/// </summary>
-		public const string RedistributablePackage86 = "https://aka.ms/vs/16/release/VC_redist.x86.exe";
+		public const string RedistributablePackage86 = "https://aka.ms/vs/17/release/vc_redist.x86.exe";
 
 		/// <summary>
 		/// Microsoft Visual C++ Redistributable for Visual Studio 2015 - 2019 (x64)
 		/// </summary>
-		public const string RedistributablePackage64 = "https://aka.ms/vs/16/release/VC_redist.x64.exe";
+		public const string RedistributablePackage64 = "https://aka.ms/vs/17/release/vc_redist.x64.exe";
 
 		/// <summary>
 		///		Output folder for logs.

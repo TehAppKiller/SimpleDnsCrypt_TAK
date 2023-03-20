@@ -46,7 +46,7 @@ namespace SimpleDnsCrypt.ViewModels
 		{
 			_windowManager = windowManager;
 			_events = events;
-			_events.Subscribe(this);
+			_events.SubscribeOnPublishedThread(this);
 			_cloakingRules = new BindableCollection<Rule>();
 			_forwardingRules = new BindableCollection<Rule>();
 
@@ -167,6 +167,8 @@ namespace SimpleDnsCrypt.ViewModels
 				_isForwardingEnabled = value;
 				ManageDnsCryptForwarding(DnscryptProxyConfigurationManager.DnscryptProxyConfiguration);
 				NotifyOfPropertyChange(() => IsForwardingEnabled);
+
+				NotifyOfPropertyChange(() => IsForwardingWorking);
 			}
 		}
 
@@ -498,6 +500,8 @@ namespace SimpleDnsCrypt.ViewModels
 				_isCloakingEnabled = value;
 				ManageDnsCryptCloaking(DnscryptProxyConfigurationManager.DnscryptProxyConfiguration);
 				NotifyOfPropertyChange(() => IsCloakingEnabled);
+
+				NotifyOfPropertyChange(() => IsCloakingWorking);
 			}
 		}
 
@@ -690,6 +694,16 @@ namespace SimpleDnsCrypt.ViewModels
 			{
 				Log.Error(exception);
 			}
+		}
+
+		public bool IsCloakingWorking
+		{
+			get => IsCloakingEnabled;
+		}
+
+		public bool IsForwardingWorking
+		{
+			get => IsForwardingEnabled;
 		}
 
 		#endregion
